@@ -1,5 +1,4 @@
 from urllib import request
-import time
 import re
 
 nothing = 12345
