@@ -23,4 +23,4 @@ text = ''.join(chr(char) for char in chars)
 lst = text.split('[')[1].split(']')[0].split(', ')
 nxt = ''.join(chr(int(char)) for char in lst)
 
-print(text.split('[')[0] + repr(nxt))
+print(text.split('[')[0] + nxt.replace('\n', '\\n'))
