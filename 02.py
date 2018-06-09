@@ -1,3 +1,4 @@
+# http://www.pythonchallenge.com/pc/def/ocr.html
 from urllib import request
 
 def insert_char(dic, char):

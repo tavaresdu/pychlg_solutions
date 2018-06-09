@@ -1,3 +1,4 @@
+# http://www.pythonchallenge.com/pc/def/equality.html
 from urllib import request
 import re
 
