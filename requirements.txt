@@ -9,4 +9,4 @@ bs4 == 0.0.1
 
 # 06.py: 1
 # 07.py: 3
-requests == 2.18.4
+requests == 2.20.0
