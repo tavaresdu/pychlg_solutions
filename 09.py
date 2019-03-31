@@ -1,7 +1,6 @@
 # http://www.pythonchallenge.com/pc/return/good.html (user=huge, pass=file)
 from PIL import Image, ImageDraw
 import requests
-import shutil
 
 a = [146,399,163,403,170,393,169,391,166,386,170,381,170,371,170,355,169,346,167,335,170,329,170,320,170,
 310,171,301,173,290,178,289,182,287,188,286,190,286,192,291,194,296,195,305,194,307,191,312,190,316,
@@ -28,8 +27,9 @@ b = [156,141,165,135,169,131,176,130,187,134,191,140,191,146,186,150,179,155,175
 77,155,81,148,87,140,96,138,105,141,110,136,111,126,113,129,118,117,128,114,137,115,146,114,155,115,
 158,121,157,128,156,134,157,136,156,136]
 
-image = Image.open("good.jpg")
+url = 'http://www.pythonchallenge.com/pc/return/good.jpg'
+image = Image.open(requests.get(url, stream=True, auth=('huge', 'file')).raw)
 draw = ImageDraw.Draw(image)
-draw.line(a, fill=(0,0,0))
-draw.line(b, fill=(0,0,0))
+draw.line(a, fill=(0,0,0), width=3)
+draw.line(b, fill=(0,0,0), width=3)
 image.show()
